@@ -1,7 +1,32 @@
-.container {
+.container_in {
   display: flex;
   flex-direction: column;
-  padding: 3rem;
+  padding: 20px;
+  border-radius: 10px;
+  /* border: 1px solid #66666699; */
+  background: linear-gradient(0deg, #191919, #111);
+  position: relative;
+  min-height: calc(100vh - 60px);
+}
+.container {
+  margin: 5px;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #f09, #0f0, #00f, #ff0, #f09,  #0f0, #00f, #ff0);
+  background-size: 400%;
+  padding: 1px;
+  animation: anim 60s linear infinite;
+}
+
+@keyframes anim {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 .links a {
