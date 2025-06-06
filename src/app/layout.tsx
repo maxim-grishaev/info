@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Montserrat, Geist_Mono } from 'next/font/google';
+import styles from './layout.module.css';
 import './globals.css';
 
 const montserrat = Montserrat({
@@ -32,7 +33,9 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png" />
         <link rel="manifest" href="/static/favicon/site.webmanifest" />
       </head>
-      <body className={`${montserrat.variable} ${geistMono.variable}`}>{children}</body>
+      <body className={`${montserrat.variable} ${geistMono.variable} ${styles.rainbow}`}>
+        <main className={styles.main}>{children}</main>
+      </body>
     </html>
   );
 }

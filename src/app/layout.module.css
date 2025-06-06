@@ -1,0 +1,49 @@
+
+@keyframes anim {
+  0% {
+    background-position: 0 0;
+    background-size:200% 200%;
+  }
+  33% {
+    background-position: 150% -150%;
+    background-size:120% 120%;
+  }
+  50% {
+    background-position: 90% -90%;
+    background-size:70% 70%;
+  }
+  66% {
+    background-position: 250% -150%;
+     background-size:120% 120%;
+  }
+  100% {
+    background-position: 200% -200%;
+    background-size:200% 200%;
+  }
+}
+
+.rainbow {
+  --gap: 1px;
+  /* background: linear-gradient(90deg, #f09, #0f0, #00f, #ff0, #f09,  #0f0, #00f, #ff0, #f09); */
+  background-image: radial-gradient(
+    /* from 0deg, */
+    rgb(219, 12, 12) 0%,
+    rgb(255, 140, 0) 17%,
+    yellow 29%,
+    rgb(3, 125, 3) 50%,
+    rgb(0, 96, 251) 66.6%,
+    rgb(95, 1, 163) 84%,
+    rgb(233, 31, 142) 100%
+  );
+  background-size:200% 200%;
+  background-repeat: repeat;
+  padding: var(--gap);
+  animation: anim 20s linear infinite;
+}
+
+.main {
+  position: relative;
+  border-radius: 5px;
+  background: #191919;
+  min-height: calc(100vh - var(--gap) - var(--gap));
+}

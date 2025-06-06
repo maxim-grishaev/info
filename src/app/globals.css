@@ -4,7 +4,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  height: 100%;
+  min-height: 100vh;
   box-sizing: border-box;
   background-color: #0c161c;
   color: #eee;
@@ -34,12 +34,12 @@ strong {
 
 a,
 a:visited {
+  transition: border-color 0.1s ease;
   color: #6ef;
   text-decoration: none;
-  border-bottom: .5px dotted #6ef;
+  border-bottom: 1px dotted #6ef;
 }
 a:hover {
-  text-decoration: none;
   border-color: transparent;
 }
 
